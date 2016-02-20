@@ -1,0 +1,113 @@
+/*
+ * Bootstrap overrides
+ */
+
+.navbar {
+  margin-bottom: 0 !important;
+}
+
+.navbar-brand {
+  padding: 5px !important;
+  margin-right: 20px;
+}
+
+
+/*
+ * Blog name and description
+ */
+
+.blog-header {
+  height: 200px;
+  padding-top: 20px;
+  background: #000 url(/images/hero.png) top left no-repeat;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .blog-header {
+    background-position: 15px 0px;
+  }
+}
+.blog-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
+}
+.blog-description {
+  font-size: 20px;
+  color: #ddd;
+}
+
+
+/*
+ * Main column and sidebar layout
+ */
+
+.blog-main {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+.sitebar-module-center {
+  text-align: center;
+}
+.sidebar-module-inset {
+  padding: 15px;
+  background-color: #375a7f;
+  border-radius: 4px;
+}
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Pagination */
+.pager {
+  margin-bottom: 60px;
+  text-align: left;
+}
+.pager > li > a {
+  width: 140px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 30px;
+}
+
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+  margin-bottom: 60px;
+}
+.blog-post-title {
+  margin-bottom: 5px;
+  font-size: 40px;
+}
+.blog-post-meta {
+  margin-bottom: 20px;
+  color: #999;
+}
+
+
+/*
+ * Footer
+ */
+
+.blog-footer {
+  padding: 20px 0;
+  color: #333;
+  text-align: center;
+  background-color: #0ce3ac;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
