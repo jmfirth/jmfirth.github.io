@@ -1,0 +1,38 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img src="//www.gravatar.com/avatar/d93d42b6e3acc1a199adea8cd8d3e2af?s=50"></img>
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li {% if current[1] == null %}class="active"{% endif %}><a href="/">Home</a></li>
+        <li {% if current[1] == "search" %}class="active"{% endif %}><a href="/search">Search</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">Released</li>
+            <li><a href="https://github.com/jmfirth/docker-webpack">docker-webpack</a></li>
+            <li><a href="https://github.com/jmfirth/generator-elm-spa">generator-elm-spa</a></li>
+            <li><a href="https://github.com/jmfirth/lala">lala</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Ongoing</li>
+            <li><a href="https://bitbucket.org/jmfirth/hue-cli">hue-cli</a></li>
+            <li><a href="https://bitbucket.org/jmfirth/hue-cli-rewrite">hue-cli-rewrite</a></li>
+          </ul>
+        </li>
+        <li {% if current[1] == "about" %}class="active"{% endif %}><a href="/about">About</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Resume</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
