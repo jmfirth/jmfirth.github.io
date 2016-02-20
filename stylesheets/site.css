@@ -11,6 +11,19 @@
   margin-right: 20px;
 }
 
+pre {
+  border: none;
+}
+
+code {
+  border: none;
+  background-color: #111;
+  color: gold;
+}
+
+p {
+  color: #eee;
+}
 
 /*
  * Blog name and description
