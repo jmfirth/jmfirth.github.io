@@ -1,0 +1,42 @@
+  <script>
+  var jekyll = {};
+  (function(model) {
+    function parseList(str) { return str.split(',').filter(Boolean) }
+
+    function createSiteTags() {
+      var tags = []
+      {% for tag in site.tags %}
+      tags.push({ name: '{{ tag[0] }}', count: {{ tag[1] | size }} })
+      {% endfor %}
+      return tags;
+    }
+
+    function createSitePosts() {
+      var posts = []
+      {% for post in site.posts %}
+      posts.push({
+        title: '{{ post.title }}',
+        date: new Date('{{ post.date }}'),
+        tags: parseList('{{ post.tags }}')
+      })
+      {% endfor %}
+      return posts
+    }
+
+    model.site = {
+      time: new Date('{{ site.time }}'),
+      posts: createSitePosts(),
+      tags: createSiteTags()
+    };
+
+    model.page = {
+      title: '{{ page.title }}',
+      categories: parseList('{{ page.categories }}'),
+      tags: parseList('{{ page.tags }}')
+    };
+
+    {% for collection in site.collections %}
+      console.log({{collection}})
+    {% endfor %}
+  })(jekyll);
+  </script>
