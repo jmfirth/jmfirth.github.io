@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    {{ content }}
+  </div>
+  <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+    <!-- <div class="sidebar-module sitebar-module-center">
+      <img src="//www.gravatar.com/avatar/d93d42b6e3acc1a199adea8cd8d3e2af?s=250"></img>
+    </div> -->
+    <div class="sidebar-module sidebar-module-inset">
+      <h4>About</h4>
+      <p>Justin Firth is a software engineer interested in everything front end, back end, and side-to-side.</p>
+    </div>
+    <div class="sidebar-module">
+      <h4>Projects</h4>
+      <ol class="list-unstyled">
+        <li><a href="https://github.com/jmfirth/docker-webpack">docker-webpack</a></li>
+        <li><a href="https://github.com/jmfirth/generator-elm-spa">generator-elm-spa</a></li>
+        <li><a href="https://github.com/jmfirth/lala">lala</a></li>
+      </ol>
+    </div>
+    <div class="sidebar-module">
+      <h4>Archives</h4>
+      <ol class="list-unstyled">
+        {% assign counter = 0 %}
+        {% for post in site.posts %}
+          {% assign thisyear = post.date | date: "%B %Y" %}
+          {% assign prevyear = post.previous.date | date: "%B %Y" %}
+          {% assign counter = counter | plus: 1 %}
+          {% if thisyear != prevyear %}
+            <li><a href="/archive/#{{ post.date | date:"%B %Y" }}">{{ thisyear }} ({{ counter }})</a></li>
+            {% assign counter = 0 %}
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </div>
+    <div class="sidebar-module">
+      <h4>Elsewhere</h4>
+      <ol class="list-unstyled">
+        <li><a href="https://github.com/jmfirth">GitHub</a></li>
+        <li><a href="https://bitbucket.org/jmfirth/">Bitbucket</a></li>
+        <li><a href="https://gitlab.com/u/jmfirth">GitLab</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
