@@ -24,8 +24,8 @@ permalink: /search
       </button>
     </div>
   </div>
-  <div class="tags">
-    <ul v-for="tag in tags">
+  <div class="site-tags">
+    <ul class="tags" v-for="tag in tags">
       <li>{{ matchingTagName }} ({{ matchingTagCount }})</li>
     </ul>
   </div>
@@ -33,9 +33,13 @@ permalink: /search
     <article v-for="post in posts" v-if="term.length > 1">
       <div class="blog-post">
         <h1 class="blog-post-title">{{ postTitle }}</h1>
-        <ul>
-          <li v-for="tag in post.tags">{{ matchingTag }}</li>
-        </ul>
+        <div class="blog-post-tags">
+          <span class="blog-post-tag-header">Tags: </span>
+          <ul>
+            <li v-for="tag in post.tags">{{ matchingTag }}</li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
         <p class="blog-post-meta">{{ postDate }}</p>
         <blockquote v-for="passage in post.content.passages">
           <p>{{ matchingPassage }}<p>

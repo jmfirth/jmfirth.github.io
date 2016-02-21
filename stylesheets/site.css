@@ -135,14 +135,31 @@ p {
   background-color: #666;
 }
 
-.tags {
-
-}
-
-.tags ul {
+.site-tags ul {
   padding-left: 0;
 }
 
-.tags ul li {
+.site-tags ul li {
+  display: inline;
+  padding-left: 5px;
   list-style-type: none;
+}
+
+.blog-post-tags ul {
+  float: left;
+  padding-left: 0;
+}
+
+.blog-post-tags ul li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 5px;
+}
+
+.blog-post-tags ul li:after {
+  content: ","
+}
+
+.blog-post-tag-header {
+  float: left;
 }
