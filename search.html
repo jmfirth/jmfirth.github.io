@@ -5,6 +5,7 @@ permalink: /search
 ---
 
 {% assign postTitle = '{{{ post.title }}}' %}
+{% assign postUrl = '{{ post.url }}' %}
 {% assign postDate = '{{ post.date | moment "dddd, MMMM Do YYYY, h:mm:ss a" }}' %}
 {% assign matchingTag = '{{{ tag }}}' %}
 {% assign matchingTagName = '{{ tag.name }}' %}
@@ -32,7 +33,9 @@ permalink: /search
   <div class="post-results">
     <article v-for="post in posts" v-if="term.length > 1">
       <div class="blog-post">
-        <h1 class="blog-post-title">{{ postTitle }}</h1>
+        <h1 class="blog-post-title">
+          <a href="{{ postUrl }}">{{ postTitle }}</a>
+        </h1>
         <div class="blog-post-tags">
           <span class="blog-post-tag-header">Tags: </span>
           <ul>

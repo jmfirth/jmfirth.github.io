@@ -17,6 +17,7 @@
       {% for post in site.posts %}
       posts.push({
         title: '{{ post.title }}',
+        url: '{{ post.url }}',
         date: new Date('{{ post.date }}'),
         tags: parseList('{{ post.tags | join:"," }}'),
         content: {
