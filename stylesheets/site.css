@@ -124,3 +124,25 @@ p {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+ * Search
+ */
+
+.search-highlight {
+  font-weight: bold;
+  border-bottom: 3px solid red;
+  background-color: #666;
+}
+
+.tags {
+
+}
+
+.tags ul {
+  padding-left: 0;
+}
+
+.tags ul li {
+  list-style-type: none;
+}

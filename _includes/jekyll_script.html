@@ -2,6 +2,7 @@
   var jekyll = {};
   (function(model) {
     function parseList(str) { return str.split(',').filter(Boolean) }
+    function splitString(html) { return html.split('\n').filter(Boolean) }
 
     function createSiteTags() {
       var tags = []
@@ -17,7 +18,11 @@
       posts.push({
         title: '{{ post.title }}',
         date: new Date('{{ post.date }}'),
-        tags: parseList('{{ post.tags }}')
+        tags: parseList('{{ post.tags | join:"," }}'),
+        content: {
+          passages: splitString(`{{ post.content | strip_html }}`),
+          html: `{{ post.content }}`
+        }
       })
       {% endfor %}
       return posts
@@ -28,15 +33,5 @@
       posts: createSitePosts(),
       tags: createSiteTags()
     };
-
-    model.page = {
-      title: '{{ page.title }}',
-      categories: parseList('{{ page.categories }}'),
-      tags: parseList('{{ page.tags }}')
-    };
-
-    {% for collection in site.collections %}
-      console.log({{collection}})
-    {% endfor %}
   })(jekyll);
   </script>
