@@ -1,0 +1,12 @@
+{% assign previousYear = "" %}
+{% assign previousMonth = "" %}
+{% for post in site.posts %}
+  {% assign thisYear = post.date | date: "%B %Y" %}
+  {% if thisYear != previousYear %}
+    <h4>{{ thisYear }}</h4>
+    {% assign previousYear = thisYear %}
+    <ul class="archive-list">
+  {% endif %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endfor %}
+    </ul>

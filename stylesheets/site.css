@@ -126,6 +126,25 @@ p {
 }
 
 /*
+ * Sidebar
+ */
+
+.archive-list {
+  padding-left: 0px;
+}
+
+.archive-list li {
+  list-style: none;
+}
+
+.archive-list li:before {
+  content: "\2014\a0 ";
+  /*content: "- ";*/
+  color: #fff;
+  font-weight: bold;
+}
+
+/*
  * Search
  */
 
