@@ -2,6 +2,7 @@
 layout: post
 title: Creating A GitHub Page with Jekyll
 tags: github jekyll static-site-generators
+date: 2016-02-20 16:10:00 -0500
 ---
 
 This guide will help you create a static site on [GitHub Pages][gh_pages_url] using [Jekyll][jekyll_url] with syntax highlighting support using [Rogue][rouge_url] and a custom domain.
