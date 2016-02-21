@@ -7,6 +7,9 @@
       term: '',
       min: 2
     },
+    ready: function() {
+      this.term = window.location.pathname.replace('/search/', '').replace('/search', '')
+    },
     methods: {
       highlightString(str) {
         var regexp = this.getTermRegExp()
