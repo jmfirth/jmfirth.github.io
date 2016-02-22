@@ -13,8 +13,8 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li {% if current[1] == null %}class="active"{% endif %}><a href="/">Home</a></li>
-        <li {% if current[1] == "search" %}class="active"{% endif %}><a href="/search">Search</a></li>
+        <li {% if current[1]==null %}class="active" {% endif %}><a href="/">Home</a></li>
+        <li {% if current[1]=="search" %}class="active" {% endif %}><a href="/search">Search</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -28,22 +28,23 @@
             <li><a href="https://bitbucket.org/jmfirth/hue-cli-rewrite">hue-cli-rewrite</a></li>
           </ul>
         </li>
-        <li {% if current[1] == "about" %}class="active"{% endif %}><a href="/about">About</a></li>
+        <li {% if current[1]=="about" %}class="active" {% endif %}><a href="/about">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <form action="" class="navbar-form navbar-right">
-             <div class="input-group">
-                 <input type="Search" placeholder="Search..." class="form-control" />
-                 <div class="input-group-btn">
-                     <button class="btn btn-info">
-                     <span class="glyphicon glyphicon-search"></span>
-                     </button>
-                 </div>
-             </div>
-          </form>
+          <div class="navbar-form navbar-right">
+            <div class="input-group">
+              <input type="Search" placeholder="Search..." class="form-control" v-model="term" @keyup.enter="search" />
+              <div class="input-group-btn">
+                <button type="button" class="btn btn-info" @click="search">
+                  <span class="glyphicon glyphicon-search"></span>
+                </button>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
-    </div><!--/.nav-collapse -->
+    </div>
+    <!--/.nav-collapse -->
   </div>
 </nav>
