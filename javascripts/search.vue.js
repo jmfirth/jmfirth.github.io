@@ -13,7 +13,7 @@
     methods: {
       highlightString(str) {
         var regexp = this.getTermRegExp()
-        return str.replace(regexp, `<span class="search-highlight">$1</span>`)
+        return str.replace(regexp, '<span class="search-highlight">$1</span>')
       },
       getTermRegExp() {
         return new RegExp('(' + this.term + ')', 'ig')
@@ -59,7 +59,7 @@
 
           if (!titleMatches && !tagHasMatch && !passageHasMatch) return;
 
-          var title = post.title.replace(regexp, `<span class="search-highlight">$1</span>`)
+          var title = post.title.replace(regexp, '<span class="search-highlight">$1</span>')
           return {
             title: title,
             url: post.url,
