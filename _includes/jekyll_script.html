@@ -21,8 +21,7 @@
         date: new Date('{{ post.date }}'),
         tags: parseList('{{ post.tags | join:"," }}'),
         content: {
-          passages: splitString(`{{ post.content | strip_html }}`),
-          html: `{{ post.content }}`
+          passages: splitString(unescape('{{ post.content | strip_html | newline_to_br | strip_newlines | split: '<br />' | join: '\n' | escape }}')),
         }
       })
       {% endfor %}
