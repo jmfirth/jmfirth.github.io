@@ -8,7 +8,7 @@
       min: 2
     },
     ready: function() {
-      this.term = window.location.pathname.replace('/search/', '').replace('/search', '')
+      this.term = window.location.pathname.replace('/search', '').replace('?q=')
     },
     methods: {
       highlightString(str) {

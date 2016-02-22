@@ -6,7 +6,7 @@
     },
     methods: {
       search: function (event) {
-        window.location.href = '/search/' + this.term
+        window.location.href = '/search?q=' + this.term
       }
     }
   })
