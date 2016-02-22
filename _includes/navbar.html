@@ -1,4 +1,4 @@
-<nav id="navbar" class="navbar navbar-default navbar-static-top">
+<nav ng-controller="NavbarCtrl" class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -34,9 +34,9 @@
         <li>
           <div class="navbar-form navbar-right">
             <div class="input-group">
-              <input type="text" placeholder="Search..." class="form-control" v-model="term" @keyup.enter="search" />
+              <input type="text" placeholder="Search..." class="form-control" ng-model="term" key-enter="search()"/>
               <div class="input-group-btn">
-                <button type="button" class="btn btn-info" @click="search">
+                <button type="button" class="btn btn-info" ng-click="search()">
                   <span class="glyphicon glyphicon-search"></span>
                 </button>
               </div>

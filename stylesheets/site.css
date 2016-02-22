@@ -148,10 +148,11 @@ p {
  * Search
  */
 
-.search-highlight {
+.highlight {
   font-weight: bold;
   border-bottom: 3px solid red;
-  background-color: #666;
+  background-color: #666 !important;
+  color: inherit !important;
 }
 
 .site-tags ul {
