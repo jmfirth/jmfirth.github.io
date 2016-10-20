@@ -1,50 +1,5 @@
-<nav id="navbar" class="navbar navbar-default navbar-static-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">
-        <img src="//www.gravatar.com/avatar/d93d42b6e3acc1a199adea8cd8d3e2af?s=50"></img>
-      </a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li {% if current[1]==null %}class="active" {% endif %}><a href="/">Home</a></li>
-        <li {% if current[1]=="search" %}class="active" {% endif %}><a href="/search">Search</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li class="dropdown-header">Released</li>
-            <li><a href="https://github.com/jmfirth/docker-webpack">docker-webpack</a></li>
-            <li><a href="https://github.com/jmfirth/generator-elm-spa">generator-elm-spa</a></li>
-            <li><a href="https://github.com/jmfirth/lala">lala</a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Ongoing</li>
-            <li><a href="https://bitbucket.org/jmfirth/hue-cli">hue-cli</a></li>
-            <li><a href="https://bitbucket.org/jmfirth/hue-cli-rewrite">hue-cli-rewrite</a></li>
-          </ul>
-        </li>
-        <li {% if current[1]=="about" %}class="active" {% endif %}><a href="/about">About</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <div class="navbar-form navbar-right">
-            <div class="input-group">
-              <input type="text" placeholder="Search..." class="form-control" v-model="term" @keyup.enter="search" />
-              <div class="input-group-btn">
-                <button type="button" class="btn btn-info" @click="search">
-                  <span class="glyphicon glyphicon-search"></span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <!--/.nav-collapse -->
-  </div>
-</nav>
+<!-- <div id="nav"></div> -->
+
+<div id="nav">
+<nav data-reactroot="" class="navbar navbar-default"><div class="container"><div class="navbar-header"><a href="#" class="navbar-brand"><img src="//www.gravatar.com/avatar/d93d42b6e3acc1a199adea8cd8d3e2af?s=50"></a><button type="button" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div><div class="navbar-collapse collapse"><ul class="nav navbar-nav"><li role="presentation" class=""><a href="/">Home</a></li><li role="presentation" class=""><a href="/search">Search</a></li><li class="dropdown"><a id="basic-nav-dropdown" role="button" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" href=""><!-- react-text: 19 -->Dropdown<!-- /react-text --><!-- react-text: 20 --> <!-- /react-text --><span class="caret"></span></a><ul role="menu" class="dropdown-menu" aria-labelledby="basic-nav-dropdown"><li role="presentation" class=""><a href="https://github.com/jmfirth/docker-webpack" role="menuitem" tabindex="-1">docker-webpack</a></li><li role="presentation" class=""><a href="https://github.com/jmfirth/generator-elm-spa" role="menuitem" tabindex="-1">generator-elm-spa</a></li><li role="presentation" class=""><a href="https://github.com/jmfirth/lala" role="menuitem" tabindex="-1">lala</a></li><li role="presentation" class=""><a href="https://github.com/jmfirth/cljs-react-bootstrap" role="menuitem" tabindex="-1">Clojurescript React-Bootstrap</a></li><li role="separator" class="divider"></li><li role="presentation" class=""><a href="https://bitbucket.org/jmfirth/hue-cli" role="menuitem" tabindex="-1">hue-cli</a></li><li role="presentation" class=""><a href="https://bitbucket.org/jmfirth/hue-cli-rewrite" role="menuitem" tabindex="-1">hue-cli-rewrite</a></li></ul></li><li role="presentation" class=""><a href="/about">About</a></li></ul></div></div></nav>
+</div>

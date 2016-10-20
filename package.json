@@ -1,0 +1,56 @@
+{
+  "name": "jmfirth.github.io",
+  "version": "1.0.0",
+  "description": "Justin Firth's personal blog",
+  "main": "_app/index.jsx",
+  "repository": {
+    "url": "git@github.com:jmfirth/jmfirth.github.io.git",
+    "type": "git"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --inline --hot --progress --history-api-fallback --config webpack.config.dev.js",
+    "build:dev": "webpack --config webpack.config.dev.js"
+  },
+  "author": "Justin Firth <jmfirth@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "css-loader": "^0.25.0",
+    "es6-promise": "^4.0.5",
+    "eslint": "^3.8.1",
+    "eslint-plugin-react": "^6.4.1",
+    "exports-loader": "^0.6.3",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.22.0",
+    "imports-loader": "^0.6.5",
+    "json-loader": "^0.5.4",
+    "node-sass": "^3.10.1",
+    "path": "^0.12.7",
+    "rimraf": "^2.5.4",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "immutable": "^3.8.1",
+    "normalize.css": "^5.0.0",
+    "react": "^15.3.2",
+    "react-bootstrap": "^0.30.5",
+    "react-dom": "^15.3.2",
+    "whatwg-fetch": "^1.0.0"
+  }
+}
